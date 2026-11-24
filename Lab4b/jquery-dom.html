@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 4B - jQuery DOM</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3edff;
+            color: #242033;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .container {
+            background: white;
+            max-width: 500px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 5px 20px #ddd2ed;
+        }
+
+        h1 {
+            color: #6d42a6;
+        }
+
+        #myElement, #myDIV {
+            margin: 20px 0;
+        }
+
+        .myStyle {
+            background-color: coral;
+            padding: 16px;
+            border-radius: 8px;
+        }
+
+        button {
+            background: #7952b3;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #5b368d;
+            transform: scale(1.05);
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>jQuery DOM Manipulation</h1>
+
+        <div id="myElement">Original Text</div>
+
+        <div id="myDIV">
+            <p>I am a myDIV.</p>
+        </div>
+
+        <button id="myButton">Click me</button>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+
+            // (a) Change text
+            $("#myElement").text("Modified Text");
+
+            // (b) Add CSS class
+            $("#myDIV").addClass("myStyle");
+
+            // (c) Button click event
+            $("#myButton").on("click", function() {
+                alert("Button clicked!");
+            });
+
+        });
+    </script>
+
+</body>
+</html>
